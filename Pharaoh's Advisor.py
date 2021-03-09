@@ -7,6 +7,8 @@ import config
 #eventually will make a useful bot once I get the hang of it
 
 client = commands.Bot(command_prefix = '~')
+client.remove_command('help')
+
 
 #ready prompt
 @client.event
@@ -15,7 +17,7 @@ async def on_ready():
 
 #admin only bool function
 def is_it_admin(ctx):
-    return ctx.author.id == config.admin_user
+    return ctx.message.author.id == config.admin_user
 
 #load commands
 @client.command()
