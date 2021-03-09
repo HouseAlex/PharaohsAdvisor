@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+import config
 
 #testing out discord commands while messing with my friends
 #eventually will make a useful bot once I get the hang of it
@@ -14,7 +15,7 @@ async def on_ready():
 
 #admin only bool function
 def is_it_admin(ctx):
-    return ctx.author.id == 397827519258165269 or ctx.author.id == 181600783043657728
+    return ctx.author.id == config.admin_user
 
 #load commands
 @client.command()
@@ -39,4 +40,4 @@ for filename in os.listdir('./Cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'Cogs.{filename[:-3]}')
 
-client.run('ODE3ODAxMjg1NDQ0MzA0OTI2.YEOyzA.tC4y9-cOt1StKFQKS7XyqsDOQtk')
+client.run(config.bot_token)
