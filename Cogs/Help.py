@@ -15,7 +15,7 @@ class help(commands.Cog):
         embed.add_field(name = 'Help', value = 'This menu', inline = False)
         embed.add_field(name = 'Ping', value = 'Test ping of Bot', inline = False)
 
-        await ctx.send(embed=embed)
+        await ctx.send(embed = embed)
 
 
 def setup(client):
