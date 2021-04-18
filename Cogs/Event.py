@@ -31,9 +31,9 @@ class events(commands.Cog):
         )
 
         messageSent = await ctx.send(embed = embed)
-        await messageSent.add_reaction(add)
-        await messageSent.add_reaction(maybe)
-
+        #await messageSent.add_reaction(add)
+        #await messageSent.add_reaction(maybe)
+        #not working yet
 
 
 def setup(client):
